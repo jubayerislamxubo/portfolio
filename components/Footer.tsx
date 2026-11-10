@@ -1,3 +1,5 @@
+'use client';
+
 import { Code2, Globe, Mail } from 'lucide-react';
 import { personalInfo } from '@/data/portfolioData';
 
