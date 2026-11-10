@@ -41,7 +41,7 @@ export default function Contact() {
             Get In Touch
           </span>
           <h2 className="text-3xl md:text-5xl font-extrabold text-white mt-4 tracking-tight">
-            Let's Work Together!
+            Lets Work Together!
           </h2>
           <p className="text-slate-400 mt-3 max-w-xl text-sm md:text-base">
             I am currently open to full-stack MERN & Next.js development projects, freelance work, or full-time opportunities. Feel free to reach out!

@@ -1,15 +1,8 @@
-'use client';
-
-import { useState, useEffect } from 'react';
 import { Code2, Globe, Mail } from 'lucide-react';
 import { personalInfo } from '@/data/portfolioData';
 
 export default function Footer() {
-  const [currentYear, setCurrentYear] = useState<number>(2026);
-
-  useEffect(() => {
-    setCurrentYear(new Date().getFullYear());
-  }, []);
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-slate-950 border-t border-slate-900 py-12">
