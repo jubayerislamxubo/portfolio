@@ -1,11 +1,7 @@
-'use client';
-
 import { Code2, Globe, Mail } from 'lucide-react';
 import { personalInfo } from '@/data/portfolioData';
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
-
   return (
     <footer className="bg-slate-950 border-t border-slate-900 py-12">
       <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
@@ -15,7 +11,7 @@ export default function Footer() {
         </div>
 
         <p className="text-slate-500 text-sm text-center">
-          © {currentYear} All rights reserved. Built with Next.js & Tailwind CSS.
+          © 2026 All rights reserved. Built with Next.js & Tailwind CSS.
         </p>
 
         <div className="flex items-center gap-4 text-slate-400">
