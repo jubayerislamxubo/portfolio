@@ -50,7 +50,7 @@ export default function Contact() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           
-          {/* Left Side: Contact Info & Social Cards */}
+          
           <div className="space-y-6">
             <div className="flex items-center gap-4 bg-slate-900/80 border border-slate-800 p-4 rounded-2xl backdrop-blur-md">
               <div className="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 shrink-0">
@@ -74,12 +74,12 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Direct WhatsApp & Messenger Cards */}
+            
             <div className="pt-2">
               <p className="text-sm font-semibold text-slate-300 mb-4">Direct Chat With Me:</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 
-                {/* WhatsApp Card */}
+                
                 <a 
                   href="https://wa.me/8801321901053"
                   target="_blank" 
@@ -115,7 +115,7 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Right Side: Contact Form */}
+          
           <div className="bg-slate-900/90 border border-slate-800/80 p-6 md:p-8 rounded-3xl backdrop-blur-xl shadow-2xl">
             <form ref={formRef} onSubmit={sendEmail} className="space-y-6">
               <div>

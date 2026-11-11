@@ -11,7 +11,7 @@ export default function Home() {
     <main className="min-h-screen bg-slate-950 text-slate-100 selection:bg-cyan-500 selection:text-slate-950">
       <Navbar />
       <Hero />
-      <CircularSkills /> {/* হিরো ও অ্যাবাউট সেকশনের মাঝখানে বসানো হলো */}
+      <CircularSkills /> 
       <About />
       <Projects />
       <Contact />

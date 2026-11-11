@@ -59,7 +59,7 @@ body {
   animation: counterSpin 45s linear infinite;
 }
 
-/* নির্দিষ্ট স্কিল বক্সে মাউস ধরলে শুধু সেই আইটেমটি থেমে যাবে এবং জুম হবে */
+
 .group\/item:hover .animate-counter-spin {
   animation-play-state: paused;
 }

@@ -36,7 +36,7 @@ export default function About() {
           </div>
         </div>
 
-        {/* Experience / Education Box */}
+       
         <div className="md:col-span-6 bg-slate-900/60 border border-slate-800 rounded-2xl p-8 space-y-6">
           <h3 className="text-xl font-bold text-white border-b border-slate-800 pb-4">
             Education & Background
