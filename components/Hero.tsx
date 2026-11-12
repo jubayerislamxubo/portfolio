@@ -61,7 +61,7 @@ export default function Hero() {
 
           <div className="relative w-full max-w-lg md:max-w-xl h-[500px] md:h-[650px] flex items-end justify-center">
             <Image
-              src="/images/jubayer.png"
+              src="/images/professional.png"
               alt="MD JUBAYER ISLAM - MERN Stack Developer"
               width={700}
               height={800}
