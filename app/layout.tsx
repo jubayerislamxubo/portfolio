@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   description: "Portfolio of MD Jubayer Islam, a passionate Full Stack MERN & Next.js Developer specializing in building modern web applications.",
   keywords: ["MD Jubayer Islam", "Full Stack Developer", "MERN Stack", "Next.js Developer", "Web Developer Portfolio"],
   authors: [{ name: "MD Jubayer Islam" }],
+  verification: {
+    google: "2Lwklx0abSZ-v2N-mzf9UMHmorVW9tIBYCZ_l2H8WJo",
+  },
 };
 
 export default function RootLayout({
@@ -27,7 +30,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
     >
       <body className="min-h-full flex flex-col bg-slate-950 text-slate-100">
         {children}
