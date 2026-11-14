@@ -55,13 +55,13 @@ export default function Hero() {
         </div>
 
        
-        <div className="md:col-span-6 relative flex items-center justify-center z-0 pt-6 md:pt-0">
+        <div className="md:col-span-6 relative flex items-center justify-center mt-20 z-0 pt-6 md:pt-0">
           
           <div className="absolute w-[350px] h-[350px] bg-cyan-500/15 rounded-full blur-3xl pointer-events-none"></div>
 
           <div className="relative w-full max-w-lg md:max-w-xl h-[500px] md:h-[650px] flex items-end justify-center">
             <Image
-              src="/images/professional.png"
+              src="/images/jsm.png"
               alt="MD JUBAYER ISLAM - MERN Stack Developer"
               width={700}
               height={800}

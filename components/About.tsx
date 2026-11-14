@@ -54,6 +54,11 @@ export default function About() {
               <h4 className="text-white font-bold text-lg">MERN & Next.js Ecosystem</h4>
               <p className="text-slate-400 text-sm">Building scalable full-stack applications, handling backend logic, and integrating modern database solutions.</p>
             </div>
+            <div className="pt-2">
+              <span className="text-xs text-cyan-400 font-semibold uppercase tracking-wider">2022 - past</span>
+              <h4 className="text-white font-bold text-lg">Secondary School Certificate (SSC)</h4>
+              <p className="text-slate-400 text-sm">Year: 2022/Group: Science/ GPA: 4.67 out of 5.00/ Main Subject: Higher Mathematics/ 4th Subject: Agriculture Studies</p>
+            </div>
           </div>
         </div>
       </div>
