@@ -1,7 +1,8 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import CircularSkills from '@/components/CircularSkills';
-import SkillProficiency from '@/components/SkillProficiency'; // নতুন প্রফেশনাল পার্সেন্টেজ সেকশন ইম্পোর্ট করা হলো
+// import SkillProficiency from '@/components/SkillProficiency';
+ 
 import About from '@/components/About';
 import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
@@ -13,7 +14,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <CircularSkills /> 
-      <SkillProficiency /> 
+      {/* <SkillProficiency />  */}
       <About />
       <Projects />
       <Contact />

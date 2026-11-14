@@ -4,8 +4,10 @@ import { ArrowRight, Download, MapPin, GraduationCap } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-[calc(100vh-5rem)] flex items-center max-w-7xl mx-auto px-6 overflow-hidden">
+    // নেভবারের সাথে হুবহু মিল রেখে max-w-6xl এবং px-4 দেওয়া হলো
+    <section id="home" className="relative min-h-[calc(100vh-5rem)] flex items-center max-w-6xl mx-auto px-4 overflow-hidden">
       <div className="grid md:grid-cols-12 gap-8 items-center w-full">
+        
         {/* Left Column */}
         <div className="md:col-span-6 space-y-6 z-10 py-12">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold">
@@ -36,7 +38,6 @@ export default function Hero() {
             </div>
           </div>
 
-         
           <div className="flex flex-wrap gap-4 pt-4">
             <a
               href="#projects"
@@ -54,9 +55,8 @@ export default function Hero() {
           </div>
         </div>
 
-       
+        {/* Right Column */}
         <div className="md:col-span-6 relative flex items-center justify-center mt-20 z-0 pt-6 md:pt-0">
-          
           <div className="absolute w-[350px] h-[350px] bg-cyan-500/15 rounded-full blur-3xl pointer-events-none"></div>
 
           <div className="relative w-full max-w-lg md:max-w-xl h-[500px] md:h-[650px] flex items-end justify-center">
@@ -70,6 +70,7 @@ export default function Hero() {
             />
           </div>
         </div>
+
       </div>
     </section>
   );

@@ -32,8 +32,9 @@ export default function Contact() {
   };
 
   return (
+    // নেভবার ও হিরো সেকশনের সাথে হুবহু মিল রেখে max-w-6xl এবং px-4 দেওয়া হলো
     <section id="contact" className="py-24 bg-slate-950 border-t border-slate-900 relative">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4">
         
         {/* Section Header */}
         <div className="mb-16">
@@ -49,7 +50,6 @@ export default function Contact() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          
           
           <div className="space-y-6">
             <div className="flex items-center gap-4 bg-slate-900/80 border border-slate-800 p-4 rounded-2xl backdrop-blur-md">
@@ -73,12 +73,10 @@ export default function Contact() {
                 <p className="text-white text-sm md:text-base font-semibold">DHAKA, Bangladesh</p>
               </div>
             </div>
-
             
             <div className="pt-2">
               <p className="text-sm font-semibold text-slate-300 mb-4">Direct Chat With Me:</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                
                 
                 <a 
                   href="https://wa.me/8801321901053"
@@ -114,7 +112,6 @@ export default function Contact() {
               </div>
             </div>
           </div>
-
           
           <div className="bg-slate-900/90 border border-slate-800/80 p-6 md:p-8 rounded-3xl backdrop-blur-xl shadow-2xl">
             <form ref={formRef} onSubmit={sendEmail} className="space-y-6">
