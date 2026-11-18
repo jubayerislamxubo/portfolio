@@ -23,7 +23,7 @@ export default function About() {
           </h2>
 
           <p className="text-slate-400 text-base leading-relaxed">
-            I am a student in the Computer Science and Technology department at Barguna Polytechnic Institute. I am deeply passionate about modern web technologies and full-stack development, constantly building real-world projects with Next.js, React, Node.js, and MongoDB.
+            I am a student in the Computer Science and Technology department . I am deeply passionate about modern web technologies and full-stack development, constantly building real-world projects with Next.js, React, Node.js, and MongoDB.
           </p>
 
           <div className="space-y-3 pt-2">
@@ -46,7 +46,7 @@ export default function About() {
             <div>
               <span className="text-xs text-cyan-400 font-semibold uppercase tracking-wider">2026 - Present</span>
               <h4 className="text-white font-bold text-lg">{personalInfo.education}</h4>
-              <p className="text-slate-400 text-sm">{personalInfo.institution}</p>
+              <p className="text-slate-400 text-sm">{personalInfo.Department}</p>
             </div>
             
             <div className="pt-2">
