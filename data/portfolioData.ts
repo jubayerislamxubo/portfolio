@@ -2,8 +2,8 @@ export const personalInfo = {
   name: "MD JUBAYER ISLAM",
   role: "Full Stack MERN & Next.js Developer",
   location: "DHAKA, Bangladesh",
-  education: " Computer Science & Technology",
-  Department: " Computer Science & Technology",
+  education: "Computer Science & Technology",
+  Department: "Computer Science & Technology",
   bio: "Passionate Full Stack Web Developer specializing in building high-performance, scalable web applications using Next.js, React, Node.js, and MongoDB.",
   github: "https://github.com/jubayerislamxubo",
   linkedin: "https://www.linkedin.com/in/md-jubayer-29157a3b5/",
@@ -16,17 +16,15 @@ export const skillsBasket = [
 ];
 
 export const projectsData = [
-
   {
     id: 1,
-    title: "Amber Shop",
+    title: "Amar Shop",
     description: "A modern full-stack e-commerce web application built with Next.js, React, and MongoDB. Features dynamic product filtering, size & quantity selection, bKash/Nagad/Rocket TrxID verification for advance delivery payments, Cash on Delivery ordering, customer reviews, and a complete admin dashboard.",
-    tech: ["React", "Next.js","Tailwind CSS", "MongoDB & Mongoose","Google Authentication","NextAuth.js"],
+    tech: ["React", "Next.js", "Tailwind CSS", "MongoDB & Mongoose", "Google Authentication", "NextAuth.js"],
     liveUrl: "https://ecommerce-amar-shop-pearl.vercel.app/",
     githubUrl: "https://github.com/jubayerislamxubo",
-    image: "/images/ironpulse.png"
+    image: "/images/j.png", // public/images ফোল্ডারে এই নামে ছবি রাখলে আলাদা দেখাবে
   },
-
   {
     id: 2,
     title: "IronPulse",
@@ -34,7 +32,7 @@ export const projectsData = [
     tech: ["React", "Next.js", "Tailwind CSS", "MongoDB"],
     liveUrl: "https://ironpulse-client-two.vercel.app",
     githubUrl: "https://github.com/jubayerislamxubo",
-    image: "/images/ironpulse.png"
+    image: "/images/ir.jpg",
   },
   {
     id: 3,
@@ -43,10 +41,6 @@ export const projectsData = [
     tech: ["React", "Node.js", "Express", "MongoDB"],
     liveUrl: "https://assignmenteight.vercel.app",
     githubUrl: "https://github.com/jubayerislamxubo",
-    image: "/images/assignment-eight.png"
+    image: "/images/library vault.jpg",
   },
-  
-
-
-
 ];

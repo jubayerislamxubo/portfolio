@@ -1,3 +1,6 @@
+'use client';
+
+import Image from 'next/image';
 import { projectsData } from '@/data/portfolioData';
 import { ExternalLink, Code, FolderGit2 } from 'lucide-react';
 
@@ -12,32 +15,76 @@ export default function Projects() {
 
       <div className="grid md:grid-cols-2 gap-8">
         {projectsData.map((project) => (
-          <div 
-            key={project.id} 
-            className="bg-slate-900/50 border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-6 transition duration-300 flex flex-col justify-between group"
+          <div
+            key={project.id}
+            role="link"
+            tabIndex={0}
+            onClick={() => window.open(project.liveUrl, '_blank', 'noopener,noreferrer')}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                window.open(project.liveUrl, '_blank', 'noopener,noreferrer');
+              }
+            }}
+            className="cursor-pointer bg-slate-900/50 border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-5 sm:p-6 transition duration-300 flex flex-col justify-between group hover:shadow-[0_12px_32px_rgba(6,182,212,0.12)]"
           >
             <div>
-              <div className="flex justify-between items-start mb-4">
+              {/* ওপর-নিচ-ডান-বাম ব্যালেন্সড প্রিভিউ ফ্রেম */}
+              <div className="relative aspect-[16/10] w-full bg-slate-950 border border-slate-800/90 rounded-xl p-3 mb-5 flex items-center justify-center overflow-hidden">
+                <div className="relative w-full h-full">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-contain rounded-lg group-hover:scale-[1.03] transition duration-500"
+                  />
+                </div>
+              </div>
+
+              {/* কার্ডের টাইটেল ও আইকন */}
+              <div className="flex justify-between items-start mb-3">
                 <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition">
                   {project.title}
                 </h3>
-                <div className="flex gap-3 text-slate-400">
-                  <a href={project.githubUrl} target="_blank" className="hover:text-cyan-400 transition" title="Source Code">
+                <div
+                  className="flex gap-3 text-slate-400"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-cyan-400 transition"
+                    title="Source Code"
+                  >
                     <Code className="w-5 h-5" />
                   </a>
-                  <a href={project.liveUrl} target="_blank" className="hover:text-cyan-400 transition" title="Live Preview">
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-cyan-400 transition"
+                    title="Live Preview"
+                  >
                     <ExternalLink className="w-5 h-5" />
                   </a>
                 </div>
               </div>
+
+              {/* বিবরণ */}
               <p className="text-slate-400 text-sm leading-relaxed mb-6">
                 {project.description}
               </p>
             </div>
 
+            {/* টেকনোলজি ব্যাজ */}
             <div className="flex flex-wrap gap-2 pt-4 border-t border-slate-800/80">
               {project.tech.map((t, index) => (
-                <span key={index} className="text-xs bg-slate-950 border border-slate-800 text-cyan-300 px-2.5 py-1 rounded-md font-medium">
+                <span
+                  key={index}
+                  className="text-xs bg-slate-950 border border-slate-800 text-cyan-300 px-2.5 py-1 rounded-md font-medium"
+                >
                   {t}
                 </span>
               ))}
