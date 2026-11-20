@@ -20,7 +20,7 @@ export default function Projects() {
         Featured Projects
       </h2>
 
-      <div className="grid grid-cols-2 gap-3 sm:gap-6 md:gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
         {projectsData.map((project) => (
           <div
             key={project.id}
@@ -33,29 +33,29 @@ export default function Projects() {
                 window.open(project.liveUrl, '_blank', 'noopener,noreferrer');
               }
             }}
-            className="cursor-pointer bg-gradient-to-b from-slate-900/80 to-slate-900/45 border border-slate-800/90 hover:border-cyan-500/50 rounded-xl sm:rounded-2xl p-2.5 sm:p-5 md:p-6 transition duration-300 flex flex-col justify-between group hover:shadow-[0_12px_32px_rgba(6,182,212,0.12)] min-w-0"
+            className="cursor-pointer bg-slate-900/50 border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-4 sm:p-6 transition duration-300 flex flex-col justify-between group hover:shadow-[0_12px_32px_rgba(6,182,212,0.12)]"
           >
             <div>
               {/* ওপর-নিচ-ডান-বাম ব্যালেন্সড প্রিভিউ ফ্রেম */}
-              <div className="relative aspect-[16/10] w-full bg-slate-950/95 border border-slate-800/90 rounded-lg sm:rounded-xl p-1.5 sm:p-3 mb-2.5 sm:mb-5 flex items-center justify-center overflow-hidden">
+              <div className="relative aspect-[16/10] w-full bg-slate-950 border border-slate-800/90 rounded-xl p-2 sm:p-3 mb-4 sm:mb-5 flex items-center justify-center overflow-hidden">
                 <div className="relative w-full h-full">
                   <Image
                     src={project.image}
                     alt={project.title}
                     fill
-                    sizes="(max-width: 768px) 50vw, 50vw"
-                    className="object-contain rounded-md sm:rounded-lg group-hover:scale-[1.03] transition duration-500"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-contain rounded-lg group-hover:scale-[1.03] transition duration-500"
                   />
                 </div>
               </div>
 
               {/* কার্ডের টাইটেল ও আইকন */}
-              <div className="flex items-start justify-between gap-1.5 sm:gap-3 mb-1.5 sm:mb-3">
-                <h3 className="text-xs sm:text-lg md:text-xl font-bold text-white group-hover:text-cyan-400 transition break-words leading-snug">
+              <div className="flex justify-between items-start gap-3 mb-2.5 sm:mb-3">
+                <h3 className="text-lg sm:text-xl font-bold text-white group-hover:text-cyan-400 transition break-words">
                   {project.title}
                 </h3>
                 <div
-                  className="flex items-center gap-1 sm:gap-3 text-slate-400 shrink-0"
+                  className="flex items-center gap-2.5 sm:gap-3 text-slate-400 shrink-0"
                   onClick={(e) => e.stopPropagation()}
                 >
                   <a
@@ -63,36 +63,36 @@ export default function Projects() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`${project.title} Source Code`}
-                    className="p-1 rounded-md bg-slate-950/70 sm:bg-transparent border border-slate-800/70 sm:border-0 hover:text-cyan-400 hover:border-cyan-500/40 transition"
+                    className="p-1 rounded-md hover:text-cyan-400 transition"
                     title="Source Code"
                   >
-                    <Code className="w-3 h-3 sm:w-5 sm:h-5" />
+                    <Code className="w-4 h-4 sm:w-5 sm:h-5" />
                   </a>
                   <a
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`${project.title} Live Preview`}
-                    className="p-1 rounded-md bg-slate-950/70 sm:bg-transparent border border-slate-800/70 sm:border-0 hover:text-cyan-400 hover:border-cyan-500/40 transition"
+                    className="p-1 rounded-md hover:text-cyan-400 transition"
                     title="Live Preview"
                   >
-                    <ExternalLink className="w-3 h-3 sm:w-5 sm:h-5" />
+                    <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5" />
                   </a>
                 </div>
               </div>
 
               {/* বিবরণ */}
-              <p className="text-slate-400 text-[10px] sm:text-sm leading-relaxed mb-3 sm:mb-6 break-words line-clamp-3 sm:line-clamp-none">
+              <p className="text-slate-400 text-xs sm:text-sm leading-relaxed mb-5 sm:mb-6 break-words">
                 {project.description}
               </p>
             </div>
 
             {/* টেকনোলজি ব্যাজ */}
-            <div className="flex flex-wrap gap-1 sm:gap-2 pt-2 sm:pt-4 border-t border-slate-800/80">
+            <div className="flex flex-wrap gap-1.5 sm:gap-2 pt-3.5 sm:pt-4 border-t border-slate-800/80">
               {project.tech.map((t, index) => (
                 <span
                   key={index}
-                  className="text-[8.5px] sm:text-xs bg-slate-950/90 border border-slate-800/90 text-cyan-300 px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-md font-medium leading-tight"
+                  className="text-[11px] sm:text-xs bg-slate-950 border border-slate-800 text-cyan-300 px-2 sm:px-2.5 py-1 rounded-md font-medium"
                 >
                   {t}
                 </span>
@@ -103,4 +103,4 @@ export default function Projects() {
       </div>
     </section>
   );
-}
+} 
