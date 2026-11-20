@@ -4,51 +4,59 @@ import { ArrowRight, Download, MapPin, GraduationCap } from 'lucide-react';
 
 export default function Hero() {
   return (
-    // নেভবারের সাথে হুবহু মিল রেখে max-w-6xl এবং px-4 দেওয়া হলো
-    <section id="home" className="relative min-h-[calc(100vh-5rem)] flex items-center max-w-6xl mx-auto px-4 overflow-hidden">
-      <div className="grid md:grid-cols-12 gap-8 items-center w-full">
+    // নেভবারের সাথে হুবহু মিল রেখে max-w-6xl এবং px-4 দেওয়া হলো
+    <section
+      id="home"
+      className="relative min-h-[calc(100vh-5rem)] flex items-center max-w-6xl mx-auto px-4 py-10 md:py-16 overflow-x-clip"
+    >
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8 items-center w-full">
         
         {/* Left Column */}
-        <div className="md:col-span-6 space-y-6 z-10 py-12">
+        <div className="md:col-span-6 space-y-5 sm:space-y-6 z-10 py-2 md:py-12 text-center md:text-left">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold">
-            <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+            <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
             <span>Available for New Projects</span>
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-extrabold text-white tracking-tight leading-tight">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight break-words">
             Hi, I&apos;m <span className="text-cyan-400">{personalInfo.name}</span>
           </h1>
 
-          <p className="text-xl md:text-2xl font-bold text-green-300">
-           MERN Stack Developer
+          <p className="text-lg sm:text-xl md:text-2xl font-bold text-green-300">
+            MERN Stack Developer
           </p>
 
-          <p className="text-slate-400 leading-relaxed text-base max-w-xl">
-            Passionate Full Stack Web Developer specializing in building high-performance, scalable web applications using <strong className="text-cyan-400 font-semibold">Next.js</strong>, <strong className="text-cyan-400 font-semibold">React</strong>, <strong className="text-cyan-400 font-semibold">Node.js</strong>, and <strong className="text-cyan-400 font-semibold">MongoDB</strong>. Dedicated to writing clean, maintainable code with modern user experiences.
+          <p className="text-slate-400 leading-relaxed text-sm sm:text-base max-w-xl mx-auto md:mx-0">
+            Passionate Full Stack Web Developer specializing in building high-performance, scalable web applications using{' '}
+            <strong className="text-cyan-400 font-semibold">Next.js</strong>,{' '}
+            <strong className="text-cyan-400 font-semibold">React</strong>,{' '}
+            <strong className="text-cyan-400 font-semibold">Node.js</strong>, and{' '}
+            <strong className="text-cyan-400 font-semibold">MongoDB</strong>. Dedicated to writing clean, maintainable code with modern user experiences.
           </p>
 
-          <div className="flex flex-wrap gap-4 text-xs text-slate-400 pt-2">
+          <div className="flex flex-wrap justify-center md:justify-start gap-3 sm:gap-4 text-xs text-slate-400 pt-1">
             <div className="flex items-center gap-2 bg-slate-900/80 border border-slate-800 px-3.5 py-2 rounded-lg">
-              <MapPin className="w-4 h-4 text-cyan-400" />
+              <MapPin className="w-4 h-4 text-cyan-400 shrink-0" />
               <span>{personalInfo.location}</span>
             </div>
             <div className="flex items-center gap-2 bg-slate-900/80 border border-slate-800 px-3.5 py-2 rounded-lg">
-              <GraduationCap className="w-4 h-4 text-cyan-400" />
+              <GraduationCap className="w-4 h-4 text-cyan-400 shrink-0" />
               <span>{personalInfo.education}</span>
             </div>
           </div>
 
-          <div className="flex flex-wrap gap-4 pt-4">
+          <div className="flex flex-wrap justify-center md:justify-start gap-3 sm:gap-4 pt-3">
             <a
               href="#projects"
-              className="flex items-center gap-2 bg-cyan-500 hover:bg-cyan-600 text-slate-950 px-6 py-3 rounded-xl font-bold transition shadow-lg shadow-cyan-500/20"
+              className="flex items-center gap-2 bg-cyan-500 hover:bg-cyan-600 text-slate-950 px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl font-bold text-sm sm:text-base transition shadow-lg shadow-cyan-500/20"
             >
               View Projects <ArrowRight className="w-4 h-4" />
             </a>
             <a
               href="/resume.pdf"
               target="_blank"
-              className="flex items-center gap-2 border border-slate-800 hover:border-slate-700 bg-slate-900/50 text-slate-200 px-6 py-3 rounded-xl font-semibold transition"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 border border-slate-800 hover:border-slate-700 bg-slate-900/50 text-slate-200 px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl font-semibold text-sm sm:text-base transition"
             >
               Resume <Download className="w-4 h-4" />
             </a>
@@ -56,10 +64,10 @@ export default function Hero() {
         </div>
 
         {/* Right Column */}
-        <div className="md:col-span-6 relative flex items-center justify-center mt-20 z-0 pt-6 md:pt-0">
-          <div className="absolute w-[350px] h-[350px] bg-cyan-500/15 rounded-full blur-3xl pointer-events-none"></div>
+        <div className="md:col-span-6 relative flex items-center justify-center mt-4 sm:mt-8 md:mt-0 z-0">
+          <div className="absolute w-[240px] h-[240px] sm:w-[320px] sm:h-[320px] md:w-[360px] md:h-[360px] bg-cyan-500/15 rounded-full blur-3xl pointer-events-none" />
 
-          <div className="relative w-full max-w-lg md:max-w-xl h-[500px] md:h-[650px] flex items-end justify-center">
+          <div className="relative w-full max-w-[300px] sm:max-w-md md:max-w-xl h-[340px] sm:h-[460px] md:h-[620px] flex items-end justify-center">
             <Image
               src="/images/jsm.png"
               alt="MD JUBAYER ISLAM - MERN Stack Developer"
