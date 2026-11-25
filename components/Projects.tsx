@@ -36,7 +36,7 @@ export default function Projects() {
             className="cursor-pointer bg-slate-900/50 border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-4 sm:p-6 transition duration-300 flex flex-col justify-between group hover:shadow-[0_12px_32px_rgba(6,182,212,0.12)]"
           >
             <div>
-              {/* ওপর-নিচ-ডান-বাম ব্যালেন্সড প্রিভিউ ফ্রেম */}
+            
               <div className="relative aspect-[16/10] w-full bg-slate-950 border border-slate-800/90 rounded-xl p-2 sm:p-3 mb-4 sm:mb-5 flex items-center justify-center overflow-hidden">
                 <div className="relative w-full h-full">
                   <Image
@@ -49,7 +49,7 @@ export default function Projects() {
                 </div>
               </div>
 
-              {/* কার্ডের টাইটেল ও আইকন */}
+              
               <div className="flex justify-between items-start gap-3 mb-2.5 sm:mb-3">
                 <h3 className="text-lg sm:text-xl font-bold text-white group-hover:text-cyan-400 transition break-words">
                   {project.title}
@@ -81,13 +81,13 @@ export default function Projects() {
                 </div>
               </div>
 
-              {/* বিবরণ */}
+              
               <p className="text-slate-400 text-xs sm:text-sm leading-relaxed mb-5 sm:mb-6 break-words">
                 {project.description}
               </p>
             </div>
 
-            {/* টেকনোলজি ব্যাজ */}
+            
             <div className="flex flex-wrap gap-1.5 sm:gap-2 pt-3.5 sm:pt-4 border-t border-slate-800/80">
               {project.tech.map((t, index) => (
                 <span

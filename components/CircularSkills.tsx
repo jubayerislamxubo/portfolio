@@ -14,7 +14,7 @@ interface Skill {
 
 export default function CircularSkills() {
   const skills: Skill[] = [
-    // Inner Orbit (Core Stack)
+    
     {
       name: 'Next.js',
       category: 'Frontend',
@@ -49,7 +49,7 @@ export default function CircularSkills() {
       glowColor: 'rgba(34, 197, 94, 0.6)',
     },
 
-    // Outer Orbit (Supporting Stack & Tools)
+    
     {
       name: 'Express.js',
       category: 'Backend',
