@@ -13,7 +13,7 @@ const STATS_CONFIG = {
   items: [
     {
       id: 'projects',
-      value: '25+',
+      value: '20+',
       label: 'Projects Completed',
       subtext: 'Full-Stack & Frontend',
     },
