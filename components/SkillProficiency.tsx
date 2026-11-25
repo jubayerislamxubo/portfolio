@@ -9,7 +9,7 @@ export default function SkillProficiency() {
   ];
 
   return (
-    <section id="skills" className="py-16 bg-slate-950 relative overflow-hidden">
+    <section  className="py-16 bg-slate-950 relative overflow-hidden">
      
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-950/10 to-transparent pointer-events-none"></div>
 

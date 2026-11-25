@@ -14,7 +14,6 @@ interface Skill {
 
 export default function CircularSkills() {
   const skills: Skill[] = [
-    
     {
       name: 'Next.js',
       category: 'Frontend',
@@ -22,7 +21,7 @@ export default function CircularSkills() {
       orbit: 'inner',
       icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
       invert: true,
-      glowColor: 'rgba(255, 255, 255, 0.5)',
+      glowColor: 'rgba(56, 189, 248, 0.65)',
     },
     {
       name: 'React.js',
@@ -30,7 +29,7 @@ export default function CircularSkills() {
       level: 'UI Architecture & State',
       orbit: 'inner',
       icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
-      glowColor: 'rgba(56, 189, 248, 0.6)',
+      glowColor: 'rgba(56, 189, 248, 0.7)',
     },
     {
       name: 'Node.js',
@@ -38,7 +37,7 @@ export default function CircularSkills() {
       level: 'Scalable Server Runtime',
       orbit: 'inner',
       icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
-      glowColor: 'rgba(74, 222, 128, 0.6)',
+      glowColor: 'rgba(74, 222, 128, 0.7)',
     },
     {
       name: 'MongoDB',
@@ -46,10 +45,8 @@ export default function CircularSkills() {
       level: 'NoSQL Database Design',
       orbit: 'inner',
       icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
-      glowColor: 'rgba(34, 197, 94, 0.6)',
+      glowColor: 'rgba(34, 197, 94, 0.7)',
     },
-
-    
     {
       name: 'Express.js',
       category: 'Backend',
@@ -57,7 +54,7 @@ export default function CircularSkills() {
       orbit: 'outer',
       icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg',
       invert: true,
-      glowColor: 'rgba(148, 163, 184, 0.6)',
+      glowColor: 'rgba(148, 163, 184, 0.65)',
     },
     {
       name: 'Tailwind CSS',
@@ -65,7 +62,7 @@ export default function CircularSkills() {
       level: 'Modern Responsive Styling',
       orbit: 'outer',
       icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg',
-      glowColor: 'rgba(6, 182, 212, 0.6)',
+      glowColor: 'rgba(6, 182, 212, 0.7)',
     },
     {
       name: 'JavaScript',
@@ -73,7 +70,7 @@ export default function CircularSkills() {
       level: 'ES6+ & Async Programming',
       orbit: 'outer',
       icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
-      glowColor: 'rgba(250, 204, 21, 0.6)',
+      glowColor: 'rgba(250, 204, 21, 0.7)',
     },
     {
       name: 'Git & GitHub',
@@ -81,7 +78,7 @@ export default function CircularSkills() {
       level: 'Version Control & CI/CD',
       orbit: 'outer',
       icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
-      glowColor: 'rgba(249, 115, 22, 0.6)',
+      glowColor: 'rgba(249, 115, 22, 0.7)',
     },
   ];
 
@@ -114,15 +111,25 @@ export default function CircularSkills() {
 
   const renderBadge = (item: Skill) => {
     const isDimmed = activeCategory !== 'All' && activeCategory !== item.category;
+    const isActive = hoveredSkill?.name === item.name;
 
     return (
       <div
         onMouseEnter={() => setHoveredSkill(item)}
         onMouseLeave={() => setHoveredSkill(null)}
-        onClick={() => setHoveredSkill((prev) => (prev?.name === item.name ? null : item))}
-        className={`bg-slate-900/95 border border-slate-700/80 hover:border-cyan-400 text-slate-100 hover:text-cyan-300 text-[9px] sm:text-xs md:text-sm px-2 py-1 sm:px-3 sm:py-1.5 md:px-3.5 md:py-2 rounded-xl font-bold shadow-[0_10px_30px_rgba(0,0,0,0.7)] backdrop-blur-md transition-all duration-300 hover:scale-110 cursor-pointer whitespace-nowrap flex items-center gap-1 sm:gap-2 ${
-          isDimmed ? 'opacity-25 scale-95' : 'opacity-100'
-        }`}
+        onClick={(e) => {
+          e.stopPropagation();
+          setHoveredSkill((prev) => (prev?.name === item.name ? null : item));
+        }}
+        style={{
+          boxShadow: isActive
+            ? `0 0 24px ${item.glowColor}, 0 10px 25px rgba(0, 0, 0, 0.75)`
+            : '0 10px 30px rgba(0, 0, 0, 0.7)',
+          borderColor: isActive ? item.glowColor : undefined,
+        }}
+        className={`pointer-events-auto bg-slate-900/95 border border-slate-700/80 hover:border-cyan-400 text-slate-100 hover:text-cyan-300 text-[9px] sm:text-xs md:text-sm px-2 py-1 sm:px-3 sm:py-1.5 md:px-3.5 md:py-2 rounded-xl font-bold backdrop-blur-md transition-all duration-300 cursor-pointer whitespace-nowrap flex items-center gap-1 sm:gap-2 ${
+          isActive ? 'scale-110 text-cyan-300' : 'hover:scale-110'
+        } ${isDimmed ? 'opacity-25 scale-95' : 'opacity-100'}`}
       >
         <div className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 flex items-center justify-center bg-slate-950 p-0.5 rounded-md border border-slate-800 shrink-0">
           <img
@@ -156,7 +163,7 @@ export default function CircularSkills() {
           className="absolute w-[320px] h-[320px] sm:w-[520px] sm:h-[520px] md:w-[750px] md:h-[750px] rounded-full blur-[140px] pointer-events-none transition-colors duration-500"
           style={{
             backgroundColor: hoveredSkill ? hoveredSkill.glowColor : 'rgba(6, 182, 212, 0.12)',
-            opacity: hoveredSkill ? 0.25 : 1,
+            opacity: hoveredSkill ? 0.28 : 1,
           }}
         />
 
@@ -197,7 +204,7 @@ export default function CircularSkills() {
         <div className="relative w-[330px] h-[330px] sm:w-[540px] sm:h-[540px] md:w-[720px] md:h-[720px] flex items-center justify-center my-2 group/stage">
           {/* Interactive Center Hub */}
           <div
-            className="absolute z-20 w-20 h-20 sm:w-36 sm:h-36 md:w-44 md:h-44 rounded-full bg-slate-900/95 border-2 flex flex-col items-center justify-center text-center p-2 sm:p-4 backdrop-blur-xl transition-all duration-300"
+            className="absolute z-20 w-20 h-20 sm:w-36 sm:h-36 md:w-44 md:h-44 rounded-full bg-slate-900/95 border-2 flex flex-col items-center justify-center text-center p-2 sm:p-4 backdrop-blur-xl transition-all duration-300 pointer-events-none"
             style={{
               borderColor: hoveredSkill ? hoveredSkill.glowColor : 'rgba(34, 211, 238, 0.5)',
               boxShadow: hoveredSkill
@@ -238,7 +245,7 @@ export default function CircularSkills() {
                 style={{ width: `${radii.inner * 2}px`, height: `${radii.inner * 2}px` }}
                 className="absolute rounded-full border border-cyan-500/25 border-dashed pointer-events-none"
               />
-              <div className="absolute inset-0 animate-orbit-cw group-hover/stage:[animation-play-state:paused]">
+              <div className="absolute inset-0 z-30 pointer-events-none animate-orbit-cw group-hover/stage:[animation-play-state:paused]">
                 {skills.map((item, index) => {
                   const angle = (index / skills.length) * 360;
                   const x = Math.cos((angle * Math.PI) / 180) * radii.inner;
@@ -275,7 +282,7 @@ export default function CircularSkills() {
               />
 
               {/* INNER ORBITING SKILLS */}
-              <div className="absolute inset-0 animate-orbit-cw group-hover/stage:[animation-play-state:paused]">
+              <div className="absolute inset-0 z-30 pointer-events-none animate-orbit-cw group-hover/stage:[animation-play-state:paused]">
                 {innerSkills.map((item, index) => {
                   const angle = (index / innerSkills.length) * 360;
                   const x = Math.cos((angle * Math.PI) / 180) * radii.inner;
@@ -298,7 +305,7 @@ export default function CircularSkills() {
               </div>
 
               {/* OUTER ORBITING SKILLS */}
-              <div className="absolute inset-0 animate-orbit-ccw-slow group-hover/stage:[animation-play-state:paused]">
+              <div className="absolute inset-0 z-30 pointer-events-none animate-orbit-ccw-slow group-hover/stage:[animation-play-state:paused]">
                 {outerSkills.map((item, index) => {
                   const angle = (index / outerSkills.length) * 360 + 45;
                   const x = Math.cos((angle * Math.PI) / 180) * radii.outer;

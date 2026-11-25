@@ -4,13 +4,11 @@ import { ArrowRight, Download, MapPin, GraduationCap } from 'lucide-react';
 
 export default function Hero() {
   return (
-    
     <section
       id="home"
       className="relative flex items-center max-w-6xl mx-auto px-4 py-10 sm:py-12 md:py-14 overflow-x-clip"
     >
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-8 items-center w-full">
-        
         {/* Left Column */}
         <div className="md:col-span-6 space-y-5 sm:space-y-6 z-10 py-2 md:py-4 text-center md:text-left">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold">
@@ -53,7 +51,8 @@ export default function Hero() {
               View Projects <ArrowRight className="w-4 h-4" />
             </a>
             <a
-              href="/resume.pdf"
+              href="/Resume.pdf"
+              download="Md_Jubayer_Islam_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 border border-slate-800 hover:border-slate-700 bg-slate-900/50 text-slate-200 px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl font-semibold text-sm sm:text-base transition"
@@ -63,7 +62,7 @@ export default function Hero() {
           </div>
         </div>
 
-        
+        {/* Right Column */}
         <div className="md:col-span-6 relative flex items-center justify-center mt-2 sm:mt-4 md:mt-0 z-0">
           <div className="absolute w-[240px] h-[240px] sm:w-[300px] sm:h-[300px] md:w-[340px] md:h-[340px] bg-cyan-500/15 rounded-full blur-3xl pointer-events-none" />
 
@@ -78,7 +77,6 @@ export default function Hero() {
             />
           </div>
         </div>
-
       </div>
     </section>
   );
