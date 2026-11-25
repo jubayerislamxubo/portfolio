@@ -4,7 +4,7 @@ import { ArrowRight, Download, MapPin, GraduationCap } from 'lucide-react';
 
 export default function Hero() {
   return (
-    // নেভবারের সাথে হুবহু মিল রেখে max-w-6xl এবং px-4 দেওয়া হলো
+    
     <section
       id="home"
       className="relative flex items-center max-w-6xl mx-auto px-4 py-10 sm:py-12 md:py-14 overflow-x-clip"
@@ -63,7 +63,7 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right Column */}
+        
         <div className="md:col-span-6 relative flex items-center justify-center mt-2 sm:mt-4 md:mt-0 z-0">
           <div className="absolute w-[240px] h-[240px] sm:w-[300px] sm:h-[300px] md:w-[340px] md:h-[340px] bg-cyan-500/15 rounded-full blur-3xl pointer-events-none" />
 

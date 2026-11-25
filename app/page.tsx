@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
+import StatsSection from '@/components/StatsSection';
 import CircularSkills from '@/components/CircularSkills';
 // import SkillProficiency from '@/components/SkillProficiency';
  
@@ -13,6 +14,7 @@ export default function Home() {
     <main className="min-h-screen bg-slate-950 text-slate-100 selection:bg-cyan-500 selection:text-slate-950">
       <Navbar />
       <Hero />
+      <StatsSection />
       <CircularSkills /> 
       {/* <SkillProficiency />  */}
       <About />
